@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Verdana;
+}
+.wrap{
+	width: 216px;
+}
+.wrap ul{
+	list-style-type: none;
+	overflow: hidden; /*清除浮动*/
+}
+.title li{
+	float: left;
+	width: 50px;
+	border: 1px solid #ccc;
+	background-color: #A7CCF2;
+	margin-right: 2px;
+}
+.title li.current{
+	border-bottom: none;
+	background-color: #fff;
+}
+.content li{
+	width: 212px;
+	height: 200px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.content li.show{
+	display: block;
+}
+.content li.hide{
+	display: none;
+}
