@@ -5,6 +5,7 @@ $(function() {
 	var speed = 2;
 	oulHtml = oul.html();
 	oul.html(oulHtml + oulHtml);
+	var timeID = null;
 
 	$('.goLeft').click(function() {
 		speed = -2;
@@ -14,7 +15,7 @@ $(function() {
 		speed = 2;
 	});
 
-	setInterval(function(){
+	function slider() {
 		if(speed < 0) {
 			if ($('.wrap ul').css('left') == -oulWidth / 2 + 'px') {
 				$('.wrap ul').css({
@@ -35,5 +36,13 @@ $(function() {
 				'left': '+='+speed+'px'
 			});
 		}
-	},30);
+	}
+
+	timeID = setInterval(slider,30);
+
+	$('.wrap').mouseover(function() {
+		clearInterval(timeID);
+	}).mouseout(function() {
+		timeID = setInterval(slider,30);
+	})
 })
