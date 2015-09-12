@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrap{
+	width: 800px;
+	height: 200px;
+	border: 3px solid #f00;
+	position: relative;
+	overflow: hidden;
+}
+.wrap ul{
+	width: 1600px;
+	overflow: hidden; /*清除浮动*/
+	_height: 1px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.wrap ul li{
+	float: left;
+	list-style-type: none;
+}
