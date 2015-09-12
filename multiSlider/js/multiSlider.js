@@ -44,5 +44,5 @@ $(function() {
 		clearInterval(timeID);
 	}).mouseout(function() {
 		timeID = setInterval(slider,30);
-	})
-})
+	});
+});
