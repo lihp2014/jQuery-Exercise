@@ -10,7 +10,7 @@
 	overflow: hidden;
 }
 .wrap ul{
-	width: 1600px;
+	width: 1600px;/*宽度为当前所有li元素宽度之和的两倍*/
 	overflow: hidden; /*清除浮动*/
 	_height: 1px;
 	position: absolute;
