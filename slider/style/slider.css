@@ -1,0 +1,48 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 10px;
+}
+.wrap{
+	width: 500px;
+	height: 350px;
+	border: 3px solid #f00;
+	overflow: hidden;
+	position: relative;
+}
+.wrap ul{
+	overflow: hidden;
+	_height: 1px;
+	width: 2000px;
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+}
+.wrap ul li{
+	list-style-type: none;
+	float: left;
+}
+.wrap ol{
+	overflow: hidden;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+.wrap ol li{
+	float: left;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	border: 1px solid #fc0;
+	list-style: none;
+	margin-right: 3px;
+	background-color: #000;
+	color: #fff;
+}
+.wrap ol li.current{
+	background-color: #fff;
+	color: #000;
+}
