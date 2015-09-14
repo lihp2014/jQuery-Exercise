@@ -8,6 +8,7 @@ $(function(){
 
 	numLi.click(function(){
 		var index = $(this).index();
+		_now = index;
 		$(this).addClass('current').siblings().removeClass('current');
 		oul.animate({'left':-imgWidth*index});
 	});
@@ -22,11 +23,11 @@ $(function(){
 		oul.animate({'left':-imgWidth*_now});
 	}
 
-	timeId = setInterval(slide,1500);
+	timeId = setInterval(slide,1000);
 
 	$('.wrap').mouseover(function(){
 		clearInterval(timeId);
 	}).mouseout(function(){
-		timeId = setInterval(slide,1500);
+		timeId = setInterval(slide,1000);
 	})
 });
