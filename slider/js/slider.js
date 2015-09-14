@@ -4,6 +4,7 @@ $(function(){
 	var imgLi = $('.wrap ul li');
 	var imgWidth = imgLi.width();
 	var _now = 0;//保存数字索引
+	var timeId = null;
 
 	numLi.click(function(){
 		var index = $(this).index();
@@ -11,7 +12,7 @@ $(function(){
 		oul.animate({'left':-imgWidth*index});
 	});
 
-	setInterval(function(){
+	function slide() {
 		if(_now == numLi.length-1) {
 			_now = 0;
 		} else {
@@ -19,5 +20,13 @@ $(function(){
 		}
 		numLi.eq(_now).addClass('current').siblings().removeClass('current');
 		oul.animate({'left':-imgWidth*_now});
-	},1500);
+	}
+
+	timeId = setInterval(slide,1500);
+
+	$('.wrap').mouseover(function(){
+		clearInterval(timeId);
+	}).mouseout(function(){
+		timeId = setInterval(slide,1500);
+	})
 });
