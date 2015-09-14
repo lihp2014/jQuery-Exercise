@@ -12,13 +12,14 @@ body{
 	overflow: hidden;
 	position: relative;
 }
+/*.sp{position: relative;left:2000px;}*/
 .wrap ul{
 	overflow: hidden;
 	_height: 1px;
-	width: 2000px;
+	width: 2500px;
 	position: absolute;
 	left: 0;
-	bottom: -3px;
+	top: 0;
 }
 .wrap ul li{
 	list-style-type: none;
