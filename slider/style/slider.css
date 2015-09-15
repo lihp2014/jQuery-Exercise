@@ -15,10 +15,10 @@ body{
 .wrap ul{
 	overflow: hidden;
 	_height: 1px;
-	width: 2500px;
+	width: 2000px;
 	position: absolute;
 	left: 0;
-	top: 0;
+	bottom: -3px;
 }
 .wrap ul li{
 	list-style-type: none;
