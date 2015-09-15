@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.more{
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+.down{
+	width: 0;
+	height: 0;
+	line-height: 0;
+	padding-top: 1px;
+	display: inline-block;
+	border-width: 3px 3px 0;
+	border-color: #c0c0c0 transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	position: relative;
+	left: 4px;
+}
+.content{
+	width: 100px;
+	border: 1px solid #c0c0c0;
+}
+.content li{
+	margin-bottom: 12px;
+}
+.content a{
+	text-decoration: none;
+}
