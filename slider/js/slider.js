@@ -10,6 +10,7 @@ $(function(){
 	numLi.click(function(){
 		var index = $(this).index();
 		_now = index;
+		_now2 = index;
 		$(this).addClass('current').siblings().removeClass('current');
 		oul.animate({'left':-imgWidth*index},500);
 	});
