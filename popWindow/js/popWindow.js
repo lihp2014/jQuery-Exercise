@@ -21,10 +21,26 @@ $(function(){
 		mask.show().css({
 			'width':viewWidth,
 			'height':viewHeight
-		})
+		});
 	});
 	closeBtn.click(function(){
 		popWindow.hide();
 		mask.hide();
+	});
+
+	$(window).resize(function(){
+		viewWidth = $(window).width();
+		viewHeight = $(window).height();
+		positionLeft = viewWidth/2 - popWidth/2;
+		positionTop = viewHeight/2 - popHeight/2;
+		
+		popWindow.css({
+			'left':positionLeft,
+			'top':positionTop
+		});
+		mask.css({
+			'width':viewWidth,
+			'height':viewHeight
+		});
 	})
 });
