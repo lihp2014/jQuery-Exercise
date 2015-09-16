@@ -2,6 +2,7 @@ $(function(){
 	var loginBtn = $('.login');
 	var popWindow = $('.popWindow');
 	var closeBtn = $('.close');
+	var mask = $('.mask');
 
 	var viewWidth = $(window).width();
 	var viewHeight = $(window).height();
@@ -17,8 +18,13 @@ $(function(){
 			'left':positionLeft,
 			'top':positionTop
 		});
+		mask.show().css({
+			'width':viewWidth,
+			'height':viewHeight
+		})
 	});
 	closeBtn.click(function(){
 		popWindow.hide();
+		mask.hide();
 	})
 });

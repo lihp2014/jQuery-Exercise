@@ -17,6 +17,7 @@ body{
 	height: 300px;
 	border: 2px solid #c0c0c0;
 	position:absolute;
+	z-index: 2;
 }
 .popWindow .title{
 	background-color: #c0c0c0;
@@ -41,4 +42,14 @@ h3 .close{
 }
 h3 .close:hover{
 	color: red;
+}
+.mask{
+	background-color: #000;
+	opacity: 0.2;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
 }
