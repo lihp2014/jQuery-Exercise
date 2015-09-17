@@ -1,0 +1,13 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.draggable{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #ff4b67;
+	cursor: pointer;
+}
