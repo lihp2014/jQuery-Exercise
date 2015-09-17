@@ -29,6 +29,7 @@ $(function(){
 		oMask.remove();
 	});
 
+	//浏览器窗口变化时仍使弹出窗口居中
 	$(window).resize(function(){
 		viewWidth = $(window).width();
 		viewHeight = $(window).height();
@@ -45,5 +46,37 @@ $(function(){
 				'height':viewHeight
 			});
 		}
-	})
+	});
+
+	//使弹出窗口可拖动
+	$('.popWindow .title').mousedown(function(e){
+		var popWindow = $('.popWindow').offset();
+		var disX = e.pageX - popWindow.left;
+		var disY = e.pageY - popWindow.top;
+
+		$(document).mousemove(function(e){
+			posLeft = e.pageX - disX;
+			posTop = e.pageY - disY;
+			//限制弹出窗口的可拖动的范围不超过可视区
+			if(posLeft < 0) {
+				posLeft = 0;
+			} else if(posLeft > $(document).width() - $('.popWindow').outerWidth(true)) {
+				posLeft = $(document).width() - $('.popWindow').outerWidth(true);
+			}
+			if(posTop < 0) {
+				posTop = 0;
+			} else if(posTop > $(document).height() - $('.popWindow').outerHeight(true)) {
+				posTop = $(document).height() - $('.popWindow').outerHeight(true);
+			}
+			$('.popWindow').css({
+				'left':posLeft,
+				'top':posTop
+			});
+		});
+
+		$(document).mouseup(function(){
+			$(document).unbind('mousemove');
+			$(document).unbind('mousedown');
+		});
+	});
 });

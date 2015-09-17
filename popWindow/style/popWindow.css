@@ -25,6 +25,7 @@ body{
 	line-height: 30px;
 	position: relative;
 	padding-left: 5px;
+	cursor: pointer;
 }
 .popWindow .content{
 	height: 270px;
