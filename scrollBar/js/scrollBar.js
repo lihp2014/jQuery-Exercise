@@ -5,7 +5,16 @@ $(function(){
 	var innerContent = $('.innerContent');
 	var outerHeight = outer.height();
 	var innerHeight = inner.height();
-	var dragHeight = innerContent.height() - outerContent.height();
+	var dragHeight = innerContent.outerHeight(true) - outerContent.height();
+
+	//让内容左右对齐
+	innerContent.css({
+		'text-align':'justify',
+		'letter-spacing':'-.15em'
+	});
+	var contHtml = innerContent.html();
+	innerContent.html(contHtml.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '').split("").join(" ").replace(/\s{3}/g, " &nbsp; "));
+
 
 	inner.mousedown(function(e){
 		var offsetInner = inner.offset();

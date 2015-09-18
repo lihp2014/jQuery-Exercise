@@ -4,6 +4,7 @@
 }
 body{
 	margin: 20px;
+	font-family: "Microsoft Yahei","微软雅黑";
 }
 .outerContent{
 	width: 400px;
@@ -17,6 +18,8 @@ body{
 	position: absolute;
 	left: 0;
 	top: 0;
+	padding: 10px;
+	font-size: 14px;
 }
 .outer{
 	width: 10px;
