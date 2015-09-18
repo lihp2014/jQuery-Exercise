@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 20px;
+}
+.outerContent{
+	width: 400px;
+	height: 500px;
+	border: 1px solid #666;
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+.innerContent{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.outer{
+	width: 10px;
+	height: 500px;
+	border-radius: 6px;
+	position: relative;
+	background-color: #272727;
+	float: left;
+}
+.inner{
+	width: 10px;
+	height: 30px;
+	border-radius: 6px;
+	background-color: #666;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
