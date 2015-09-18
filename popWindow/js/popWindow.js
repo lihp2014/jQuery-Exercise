@@ -78,5 +78,7 @@ $(function(){
 			$(document).unbind('mousemove');
 			$(document).unbind('mousedown');
 		});
+
+		return false;
 	});
 });
