@@ -9,8 +9,10 @@ $(function(){
 	var now = 0;
 
 	rightBtn.click(function(){
+		leftBtn.removeClass('disable');
 		if(now >= imgSmallLi.length-5) {
 			now = imgSmallLi.length-5;
+			$(this).addClass('disable');
 		} else {
 			now++;
 		}
@@ -20,8 +22,10 @@ $(function(){
 	});
 
 	leftBtn.click(function(){
+		rightBtn.removeClass('disable');
 		if(now <= 0) {
 			now = 0;
+			$(this).addClass('disable');
 		} else {
 			now--;
 		}
