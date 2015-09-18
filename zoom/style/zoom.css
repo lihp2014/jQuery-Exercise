@@ -6,13 +6,13 @@ body{
 	margin: 20px;
 }
 .zoomMiddle{
-	width: 320px;
+	width: 300px;
 	height: 300px;
 	border: 1px solid #ccc;
 	position: relative;
 }
 .zoomMiddle img{
-	width: 320px;
+	width: 300px;
 	height: 300px;
 }
 .mask{
@@ -26,7 +26,7 @@ body{
 	display: none;
 	cursor: move;
 }
-/*span{
+span{
 	margin-top: 3px;
 	float: left;
 	width: 10px;
@@ -36,13 +36,22 @@ body{
 	border: 1px solid #ccc;
 	position: absolute;
 	cursor: pointer;
-}*/
+}
+span.goRight{
+	left: 310px;
+}
+span.disable{
+	background-color: #666;
+	opacity: 0.4;
+}
 .zoomSmall{
-	width: 322px;
+	width: 269px;
 	height: 45px;
 	overflow: hidden;
-	margin-top: 3px;
+	margin: 3px;
 	position: relative;
+	left: 14px;
+	float: left;
 }
 .zoomSmallList{
 	list-style-type: none;

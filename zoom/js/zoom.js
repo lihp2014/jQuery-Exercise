@@ -1,8 +1,34 @@
 $(function(){
+	var imgSmall = $('.zoomSmallList');
 	var imgSmallLi = $('.zoomSmallList li');
 	var imgMiddle = $('.zoomMiddle');
 	var imgLarge = $('.zoomLarge');
 	var imgMiddleOffset = imgMiddle.offset();
+	var leftBtn = $('.goLeft');
+	var rightBtn = $('.goRight');
+	var now = 0;
+
+	rightBtn.click(function(){
+		if(now >= imgSmallLi.length-5) {
+			now = imgSmallLi.length-5;
+		} else {
+			now++;
+		}
+		imgSmall.animate({
+			'left':-now*imgSmallLi.outerWidth(true)
+		},500);
+	});
+
+	leftBtn.click(function(){
+		if(now <= 0) {
+			now = 0;
+		} else {
+			now--;
+		}
+		imgSmall.animate({
+			'left':now*imgSmallLi.outerWidth(true)
+		},500);
+	});
 
 	imgSmallLi.mouseover(function(){
 		//鼠标滑动更换中图路径
