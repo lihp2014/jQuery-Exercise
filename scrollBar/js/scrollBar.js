@@ -32,4 +32,24 @@ $(function(){
 
 		return false;
 	});
+
+		//添加鼠标滚动事件
+		var speed = 0;
+		$(document).on('mousewheel',function(e){
+		if(e.deltaY == -1) {
+			speed++;
+			if(speed > (outerHeight - innerHeight)/10){
+				speed = (outerHeight - innerHeight)/10;
+			}
+		} else {
+			speed--;
+			if(speed < 0) {
+				speed = 0;
+			}
+		}
+
+		inner.css('top',speed*10);
+		var percentage = (speed*10)/(outerHeight - innerHeight);
+		innerContent.css('top',-percentage*dragHeight);
+	});
 });
