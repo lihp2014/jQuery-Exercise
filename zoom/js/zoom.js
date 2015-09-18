@@ -1,6 +1,7 @@
 $(function(){
 	var imgSmallLi = $('.zoomSmallList li');
 	var imgMiddle = $('.zoomMiddle');
+	var imgLarge = $('.zoomLarge');
 	var imgMiddleOffset = imgMiddle.offset();
 
 	imgSmallLi.mouseover(function(){
@@ -8,6 +9,7 @@ $(function(){
 		$(this).addClass('current').siblings().removeClass();
 		var imgSrc = $(this).children('img').attr('src');
 		imgMiddle.children('img').attr('src',imgSrc);
+		imgLarge.children('img').attr('src',imgSrc);
 	});
 
 	imgMiddle.mouseover(function(e){
