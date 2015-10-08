@@ -1,0 +1,16 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrap{
+	position: relative;
+}
+.box{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 250px;
+}
+.box img{
+	width: 250px;
+}
