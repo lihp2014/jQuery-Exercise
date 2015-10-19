@@ -33,36 +33,36 @@ $(function() {
 
 	var fnHashTrigger = function(target) {
 	var query = location.href.split("?")[1],eleTarget = target || null;
-	if (typeof query == "undefined") {
-		if(eleTarget = aLi.eq(0)) {
-			//如果没有查询字符，则使用第一个导航元素的查询字符串
-			// console.log(eleTarget);
-			history.replaceState({title:document.title},document.title,location.href.split("#")[0] + "?" + eleTarget.attr('href').split("?")[1]) + location.hash;
-			fnHashTrigger(eleTarget);
-		}
-	} else {
-		tLi.each(function(){
-			if (eleTarget === null && $(this).children('a').attr('href').split("?")[1] === query) {
-				eleTarget = this;
+		if (typeof query == "undefined") {
+			if(eleTarget = aLi.eq(0)) {
+				//如果没有查询字符，则使用第一个导航元素的查询字符串
+				// console.log(eleTarget);
+				history.replaceState({title:document.title},document.title,location.href.split("#")[0] + "?" + eleTarget.attr('href').split("?")[1]) + location.hash;
+				fnHashTrigger(eleTarget);
 			}
+		} else {
+			tLi.each(function(){
+				if (eleTarget === null && $(this).children('a').attr('href').split("?")[1] === query) {
+					eleTarget = this;
+				}
+			});
+
+			if(!eleTarget){
+				//如果查询序列没有对应的导航菜单，去除查询然后执行回调
+				history.replaceState({},0,location.href.split("?")[0]);
+				fnHashTrigger();
+			} else {
+				$(eleTarget).trigger("click");
+			}
+		}
+	};
+
+	if(history.pushState) {
+		window.addEventListener("popstate",function(){
+			fnHashTrigger();
 		});
 
-		if(!eleTarget){
-			//如果查询序列没有对应的导航菜单，去除查询然后执行回调
-			history.replaceState({},0,location.href.split("?")[0]);
-			fnHashTrigger();
-		} else {
-			$(eleTarget).trigger("click");
-		}
-	}
-};
-
-if(history.pushState) {
-	window.addEventListener("popstate",function(){
+		//默认载入
 		fnHashTrigger();
-	});
-
-	//默认载入
-	fnHashTrigger();
-}
+	}
 });
