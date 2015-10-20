@@ -19,7 +19,7 @@
 .star_5{left: 80px;}
 /*鼠标hover效果实现，分别显示背景与定宽*/
 .star:hover{
-	background:url(star.png) repeat-x 0 -20px;
+	background:url(star.png) repeat-x 0 -20px!improtant;
 	left: 0;z-index: 2;
 }
 .star_1:hover{width: 20px;}
@@ -36,3 +36,16 @@ label{
 
 /*隐藏单选按钮*/
 .score{position:absolute;clip:rect(0 0 0 0);}
+
+/*保存鼠标单击后选定的星星的状态*/
+.score:checked + .star{
+	background:url(star.png) repeat-x 0 -20px;
+	left:0;z-index: 1;
+}
+.score1:checked ~ .star_1{width: 20px;}
+.score2:checked ~ .star_2{width: 40px;}
+.score3:checked ~ .star_3{width: 60px;}
+.score4:checked ~ .star_4{width: 80px;}
+.score5:checked ~ .star_5{width: 100px;}
+
+/*.star_bg:hover .star{background-image: none;}*/
