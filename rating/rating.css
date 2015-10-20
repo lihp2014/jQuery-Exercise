@@ -19,7 +19,7 @@
 .star_5{left: 80px;}
 /*鼠标hover效果实现，分别显示背景与定宽*/
 .star:hover{
-	background:url(star.png) repeat-x 0 -20px!improtant;
+	background:url(star.png) repeat-x 0 -20px !important;
 	left: 0;z-index: 2;
 }
 .star_1:hover{width: 20px;}
@@ -48,4 +48,5 @@ label{
 .score4:checked ~ .star_4{width: 80px;}
 .score5:checked ~ .star_5{width: 100px;}
 
-/*.star_bg:hover .star{background-image: none;}*/
+/*经过父级容器，星星背景去除*/
+.star_bg:hover .star{background-image: none;}
