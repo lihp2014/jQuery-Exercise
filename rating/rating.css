@@ -1,0 +1,38 @@
+/*灰色背景星星五个平铺*/
+.star_bg{
+	width:100px;height: 20px;
+	background: url(star.png) repeat-x;
+	position: relative;
+	overflow: hidden;
+}
+/*5个小星星的默认状态定位*/
+.star{
+	height: 100%;width: 20px;
+	line-height: 6em;
+	position: absolute;
+	z-index: 3;
+}
+.star_1{left: 0;}
+.star_2{left: 20px;}
+.star_3{left: 40px;}
+.star_4{left: 60px;}
+.star_5{left: 80px;}
+/*鼠标hover效果实现，分别显示背景与定宽*/
+.star:hover{
+	background:url(star.png) repeat-x 0 -20px;
+	left: 0;z-index: 2;
+}
+.star_1:hover{width: 20px;}
+.star_2:hover{width: 40px;}
+.star_3:hover{width: 60px;}
+.star_4:hover{width: 80px;}
+.star_5:hover{width: 100px;}
+
+label{
+	display:block;_display:inline;
+	height:100%;width:100%;
+	cursor:pointer;
+}
+
+/*隐藏单选按钮*/
+.score{position:absolute;clip:rect(0 0 0 0);}
